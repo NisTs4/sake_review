@@ -7,6 +7,13 @@ class SakesController < ApplicationController
   end
 
   def show
+    @reviews = Review.where(sake_id: @sake.id).order("created_at DESC")
+
+    if @sake.blank?
+      @avg_review = 0
+    else
+      @avg_review = @reviews.average(:rating).round(2)
+    end
   end
 
   def new
