@@ -30,8 +30,6 @@ class SakesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /sakes/1
-  # PATCH/PUT /sakes/1.json
   def update
     respond_to do |format|
       if @sake.update(sake_params)
@@ -44,8 +42,6 @@ class SakesController < ApplicationController
     end
   end
 
-  # DELETE /sakes/1
-  # DELETE /sakes/1.json
   def destroy
     @sake.destroy
     respond_to do |format|
@@ -55,13 +51,11 @@ class SakesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_sake
       @sake = Sake.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def sake_params
-      params.require(:sake).permit(:name, :description, :size, :maker, :rating)
+      params.require(:sake).permit(:name, :description, :size, :maker, :rating, :image)
     end
 end

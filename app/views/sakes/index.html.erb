@@ -17,6 +17,7 @@
   <tbody>
     <% @sakes.each do |sake| %>
       <tr>
+        <td><%= image_tag sake.image.url(:medium) %></td>
         <td><%= sake.name %></td>
         <td><%= sake.description %></td>
         <td><%= sake.size %></td>
