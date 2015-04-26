@@ -1,36 +1,17 @@
-<p id="notice"><%= notice %></p>
+<% if !user_signed_in? %>
+  <div class="jumbotron">
+    <h1>Your Favorite Sake Reviewed</h1>
+    <p>aaaaaa</p>
+    <p><%= link_to "Sign up to write a Review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+  </div>
+<% end %>
 
-<h1>Listing Sakes</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Size</th>
-      <th>Maker</th>
-      <th>Rating</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @sakes.each do |sake| %>
-      <tr>
-        <td><%= image_tag sake.image.url(:medium) %></td>
-        <td><%= sake.name %></td>
-        <td><%= sake.description %></td>
-        <td><%= sake.size %></td>
-        <td><%= sake.maker %></td>
-        <td><%= sake.rating %></td>
-        <td><%= link_to 'Show', sake %></td>
-        <td><%= link_to 'Edit', edit_sake_path(sake) %></td>
-        <td><%= link_to 'Destroy', sake, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Sake', new_sake_path %>
+<div class="row">
+  <% @sakes.each do |sake| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+	<%= link_to (image_tag sake.image.url(:medium), dlass: 'image'), sake %>
+      </div>
+    </div>
+  <% end %>
+</div>

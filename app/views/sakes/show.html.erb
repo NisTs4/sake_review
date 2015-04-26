@@ -1,29 +1,36 @@
-<%= image_tag @sake.image.url(:medium) %>
-
-<p>
-  <strong>Name:</strong>
-  <%= @sake.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @sake.description %>
-</p>
-
-<p>
-  <strong>Size:</strong>
-  <%= @sake.size %>
-</p>
-
-<p>
-  <strong>Maker:</strong>
-  <%= @sake.maker %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @sake.rating %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="col-md-4">
+      <%= image_tag @sake.image.url(:medium) %>
+      <div class="table-responsive">
+	<table class="table">
+	  <tbody>
+	    <tr>
+	      <td><strong>Name:</strong></td>
+	      <td><%= @sake.name %></td>
+	    </tr>
+	    <tr>
+	      <td><strong>Description:</strong></td>
+	      <td><%= @sake.description %></td>
+	    </tr>
+	    <tr>
+	      <td><strong>Size:</strong></td>
+	      <td><%= @sake.size %></td>
+	    </tr>
+	    <tr>
+	      <td><strong>Maker:</strong></td>
+	      <td><%= @sake.maker %></td>
+	    </tr>
+	    <tr>
+	      <td><strong>Rating:</strong></td>
+	      <td><%= @sake.rating %></td>
+	    </tr>
+	  </tbody>
+	</table>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_sake_path(@sake) %> |
 <%= link_to 'Back', sakes_path %>
