@@ -2,7 +2,12 @@
 @import "bootstrap";
 
 body {
-  background: #42691E;
+  //background: #42691E;
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  /* color: #505050; */
+  color: #000;
 }
 
 .review_title {
@@ -14,6 +19,6 @@ body {
   border-bottom: 1px solid #EAEAEA;
   .star-rating {
     padding-bottom: 8px;
-  }
+}
 }
 

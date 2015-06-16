@@ -1,12 +1,13 @@
 <% if !user_signed_in? %>
   <div class="jumbotron">
-    <h1>Sakennect 日本酒でつながろう!</h1>
-    <p>日本酒の銘柄をレビューしあいましょう！一緒に呑み友をつくりませんか？</p>
+    <h1>SakeDict. 美味しい日本酒を見つけよう!</h1>
+    <p>日本酒の銘柄の情報共有サイトです。銘柄追加、レビュー投稿できます！</p>
     <p><%= link_to "アカウントを作成する", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
   </div>
 <% end %>
 
 <div class="row">
+  <h1>日本酒一覧</h1>
   <% @sakes.each do |sake| %>
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
