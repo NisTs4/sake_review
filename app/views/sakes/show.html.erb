@@ -6,34 +6,34 @@
 	<%= image_tag @sake.image.url(:medium) %>
 
 	<div class="star-rating" data-score= <%= @avg_review %>></div>
-	<em><%= "#{@reviews.length} reviews" %></em>
+	<em><%= "#{@reviews.length} 件のレビュー" %></em>
 
 	<div class="table-responsive">
 	  <table class="table">
 	    <tbody>
 	      <tr>
-		<td><strong>Name:</strong></td>
+		<td><strong>銘柄名</strong></td>
 		<td><%= @sake.name %></td>
 	      </tr>
 	      <tr>
-		<td><strong>Description:</strong></td>
+		<td><strong>詳細情報</strong></td>
 		<td><%= @sake.description %></td>
 	      </tr>
 	      <tr>
-		<td><strong>Size:</strong></td>
+		<td><strong>サイズ</strong></td>
 		<td><%= @sake.size %></td>
 	      </tr>
 	      <tr>
-		<td><strong>Maker:</strong></td>
+		<td><strong>製造元</strong></td>
 		<td><%= @sake.maker %></td>
 	      </tr>
 	      <tr>
-		<td><strong>Rating:</strong></td>
+		<td><strong>価格</strong></td>
 		<td><%= @sake.rating %></td>
 	      </tr>
 	    </tbody>
 	  </table>
-	  <%= link_to "Write a Review", new_sake_review_path(@sake) %>
+	  <%= link_to "レビューを書く", new_sake_review_path(@sake) %>
 	</div>
       </div>
 
@@ -58,8 +58,8 @@
   </div>
 </div>
 
-<%= link_to 'Edit', edit_sake_path(@sake) %> |
-<%= link_to 'Back', sakes_path %>
+<%= link_to '編集する', edit_sake_path(@sake) %> |
+<%= link_to '一覧にもどる', sakes_path %>
 
 <script>
   $('.star-rating').raty({
