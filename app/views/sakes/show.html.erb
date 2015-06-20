@@ -16,7 +16,7 @@
 		<td><%= @sake.name %></td>
 	      </tr>
 	      <tr>
-		<td><strong>詳細情報</strong></td>
+		<td><strong>詳細説明</strong></td>
 		<td><%= @sake.description %></td>
 	      </tr>
 	      <tr>
@@ -47,19 +47,15 @@
 		<td><strong>精米歩合</strong></td>
 		<td><%= @sake.seimaibuai %></td>
 	      </tr>
-	      <tr>
-		<td><strong>価格</strong></td>
-		<td><%= @sake.rating %></td>
-	      </tr>
 	    </tbody>
 	  </table>
-	  <%= link_to "レビュー投稿", new_sake_review_path(@sake) %>
 	</div>
       </div>
 
       <div class="col-md-7 col-md-offset-1">
 	<h1 class="review_title"><%= @sake.name %></h1>
 	<p><%= @sake.catchcopy %></p>
+	<%= link_to "レビュー投稿", new_sake_review_path(@sake), class: "btn btn-large btn-success" %>
 
 	<% if @reviews.blank? %>
 	  <h3>No review just yet, would you like to add the first!</h3>
