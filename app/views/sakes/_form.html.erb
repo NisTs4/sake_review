@@ -12,28 +12,56 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label "画像" %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label "銘柄名" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label "キャッチコピー" %><br>
+    <%= f.text_area :catchcopy %>
+  </div>
+  <div class="field">
+    <%= f.label "詳細説明" %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :size %><br>
-    <%= f.text_field :size %>
+    <%= f.label "産地" %><br>
+    <%= f.text_field :home %>
   </div>
   <div class="field">
-    <%= f.label :maker %><br>
+    <%= f.label "蔵元" %><br>
     <%= f.text_field :maker %>
   </div>
   <div class="field">
-    <%= f.label :rating %><br>
-    <%= f.text_field :rating %>
+    <%= f.label "分類" %><br>
+    <%= f.text_field :classification %>
   </div>
   <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
+    <%= f.label "アルコール度数" %><br>
+    <%= f.text_field :alcohol %>
+  </div>
+  <div class="field">
+    <%= f.label "原料名" %><br>
+    <%= f.text_field :ingredient %>
+  </div>
+  <div class="field">
+    <%= f.label "原料米" %><br>
+    <%= f.text_field :rice %>
+  </div>
+  <div class="field">
+    <%= f.label "精米歩合" %><br>
+    <%= f.text_field :seimaibuai %>
+  </div>
+  <div class="field">
+    <%= f.label "サイズ" %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label "参考価格" %><br>
+    <%= f.text_field :rating %>
   </div>
   <div class="actions">
     <%= f.submit %>

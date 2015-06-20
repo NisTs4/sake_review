@@ -20,12 +20,32 @@
 		<td><%= @sake.description %></td>
 	      </tr>
 	      <tr>
-		<td><strong>サイズ</strong></td>
-		<td><%= @sake.size %></td>
+		<td><strong>産地</strong></td>
+		<td><%= @sake.home %></td>
 	      </tr>
 	      <tr>
-		<td><strong>製造元</strong></td>
+		<td><strong>蔵元</strong></td>
 		<td><%= @sake.maker %></td>
+	      </tr>
+	      <tr>
+		<td><strong>分類</strong></td>
+		<td><%= @sake.classification %></td>
+	      </tr>
+	      <tr>
+		<td><strong>アルコール度数</strong></td>
+		<td><%= @sake.alcohol %></td>
+	      </tr>
+	      <tr>
+		<td><strong>原料名</strong></td>
+		<td><%= @sake.ingredient %></td>
+	      </tr>
+	      <tr>
+		<td><strong>原料米</strong></td>
+		<td><%= @sake.rice %></td>
+	      </tr>
+	      <tr>
+		<td><strong>精米歩合</strong></td>
+		<td><%= @sake.seimaibuai %></td>
 	      </tr>
 	      <tr>
 		<td><strong>価格</strong></td>
@@ -33,13 +53,13 @@
 	      </tr>
 	    </tbody>
 	  </table>
-	  <%= link_to "レビューを書く", new_sake_review_path(@sake) %>
+	  <%= link_to "レビュー投稿", new_sake_review_path(@sake) %>
 	</div>
       </div>
 
       <div class="col-md-7 col-md-offset-1">
 	<h1 class="review_title"><%= @sake.name %></h1>
-	<p><%= @sake.description %></p>
+	<p><%= @sake.catchcopy %></p>
 
 	<% if @reviews.blank? %>
 	  <h3>No review just yet, would you like to add the first!</h3>
