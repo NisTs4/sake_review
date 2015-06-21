@@ -59,11 +59,10 @@
       <div class="col-md-7 col-md-offset-1">
 	<h1 class="review_title"><%= @sake.name %></h1>
 	<p><%= @sake.catchcopy %></p>
-	<%= link_to "レビュー投稿", new_sake_review_path(@sake), class: "btn btn-large btn-success" %>
+	<%= link_to "レビュー投稿", new_sake_review_path(@sake), class: "btn btn-success" %>
 
 	<% if @reviews.blank? %>
-	  <h3>No review just yet, would you like to add the first!</h3>
-	  <%= link_to "Write Review", new_sake_review_path(@sake), class: "btn btn-danger" %>
+	  <h3>まだレビューがありません。投稿してください！</h3>
 	<% else %>
 	  <% @reviews.each do |review| %>
 	    <div class="reviews">
