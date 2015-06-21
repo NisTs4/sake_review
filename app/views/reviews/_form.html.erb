@@ -12,6 +12,7 @@
   <% end %>
 
   <div class="field">
+    <%= f.label "レート" %><br>
     <div id="star-rating"></div>
   </div>
   <div class="field">
@@ -19,7 +20,7 @@
     <%= f.text_area :comment %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "投稿する", class: "btn btn-large btn-success"%>
   </div>
 <% end %>
 

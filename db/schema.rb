@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150620080213) do
+ActiveRecord::Schema.define(version: 20150620084431) do
 
   create_table "reviews", force: :cascade do |t|
     t.integer  "rating"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20150620080213) do
     t.string   "home"
     t.string   "classification"
     t.string   "catchcopy"
+    t.string   "url"
   end
 
   create_table "users", force: :cascade do |t|
