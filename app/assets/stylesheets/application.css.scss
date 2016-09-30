@@ -22,3 +22,11 @@ body {
 }
 }
 
+.sake-name{
+  text-align: center;
+}
+
+//フォーム幅の調整
+input.form-control,textarea.form-control{
+  width:auto;
+}

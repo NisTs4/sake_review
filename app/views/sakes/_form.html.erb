@@ -17,47 +17,47 @@
   </div>
   <div class="field">
     <%= f.label "銘柄名" %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name , class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label "キャッチコピー" %><br>
-    <%= f.text_area :catchcopy %>
+    <%= f.text_area :catchcopy , class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label "詳細説明" %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description , class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label "URL" %><br>
-    <%= f.text_area :url %>
+    <%= f.url_field :url , class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label "産地" %><br>
-    <%= f.text_field :home %>
+    <%= f.text_field :home , class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label "蔵元" %><br>
-    <%= f.text_field :maker %>
+    <%= f.text_field :maker , class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label "分類" %><br>
-    <%= f.text_field :classification %>
+    <%= f.text_field :classification , class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label "アルコール度数" %><br>
-    <%= f.text_field :alcohol %>
+    <%= f.number_field :alcohol , class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label "原料名" %><br>
-    <%= f.text_field :ingredient %>
+    <%= f.text_field :ingredient , class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label "原料米" %><br>
-    <%= f.text_field :rice %>
+    <%= f.text_field :rice , class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label "精米歩合(%)" %><br>
-    <%= f.text_field :seimaibuai %>
+    <%= f.number_field :seimaibuai , class: "form-control" %>
   </div>
   <div class="actions">
     <%= f.submit "登録", class: "btn btn-default btn-primary" %>

@@ -16,7 +16,7 @@
         <% if user_signed_in? %>
           <li><%= link_to "銘柄の追加", new_sake_path, class: "active" %></li>
           <li><%= link_to "アカウント", edit_user_registration_path %></li>
-	  <li><%= link_to "ログアウト", destroy_user_session_path, :method => :delete %></li>
+	        <li><%= link_to "ログアウト", destroy_user_session_path, :method => :delete %></li>
         <% else %>
           <li><%= link_to "ログイン", new_user_session_path, class: "active" %></li>
         <% end %>
